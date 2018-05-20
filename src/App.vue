@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <zheader></zheader>
-    
+    <div class="container">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
