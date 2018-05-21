@@ -51,6 +51,7 @@ export default {
           password: this.password,
           confirmPassword: this.confirmPassword
         }
+        // 把输入框中的数据post到数据库存贮，成功之后页面跳转到login页面
         axios.post('/users.json',formData).then(res => {this.$router.push('/login')})
       }else{
         alert("两次密码不一致")
