@@ -1,7 +1,7 @@
 <template>
   <div class="con">
       <div class="mt-2 card bg-light text-dark">
-        <div class="card-header">联系我们</div>
+        <div class="card-header">点餐文档</div>
         <div class="card-body">
             <div class="card-text">526697296@qq.com</div>
             <div class="card-text">526697296@qq.com</div>

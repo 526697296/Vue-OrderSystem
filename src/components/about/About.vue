@@ -4,16 +4,16 @@
       <!-- about下面四个导航 -->
       <div class="col-4">
         <div class="list-group mb-5">
-          <router-link tag="div" class="nav-link" :to="{name:'hislink'}" exact>
+          <router-link tag="div" class="nav-link" :to="{name:'ahis'}" exact>
             <a class="list-group-item list-group-item-action">历史订单</a>
           </router-link>
-          <router-link tag="div" class="nav-link" :to="{name:'conlink'}" exact>
+          <router-link tag="div" class="nav-link" :to="{name:'acontent'}" exact>
             <a class="list-group-item list-group-item-action">联系我们</a>
           </router-link>
-          <router-link tag="div" class="nav-link" :to="{name:'ogulink'}" exact>
+          <router-link tag="div" class="nav-link" :to="{name:'aogu'}" exact>
             <a class="list-group-item list-group-item-action">点餐文档</a>
           </router-link>
-          <router-link tag="div" class="nav-link" :to="{name:'dellink'}" exact>
+          <router-link tag="div" class="nav-link" :to="{name:'adel'}" exact>
             <a class="list-group-item list-group-item-action">快递信息</a>
           </router-link>
         </div>

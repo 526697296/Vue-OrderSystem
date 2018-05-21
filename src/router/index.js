@@ -8,10 +8,10 @@ import About from '../components/about/About.vue'
 import Login from '../components/Login.vue'
 import Admin from '../components/Admin.vue'
 // About二级路由
-// import Con from '../components/about/Con.vue'
-// import Del from '../components/about/Del.vue'
-// import His from '../components/about/His.vue'
-// import Ogu from '../components/about/Ogu.vue'
+import Acontent from '../components/about/Acontent.vue'
+import Adel from '../components/about/Adel.vue'
+import Ahis from '../components/about/Ahis.vue'
+import Aogu from '../components/about/Aogu.vue'
 Vue.use(Router)
 export default new Router({
   mode:'history',
@@ -39,29 +39,29 @@ export default new Router({
       path: '/about',
       name: 'About',
       component: About,
-      // redirect:'/about/his',
-      // children:[
-      //   {
-      //     path:'/about/con',
-      //     name:'conlink',
-      //     component:Con
-      //   },
-      //   {
-      //     path:'/about/del',
-      //     name:'dellink',
-      //     component:Del
-      //   },
-      //   {
-      //     path:'/about/his',
-      //     name:'hislink',
-      //     component:His
-      //   },
-      //   {
-      //     path:'/about/ogu',
-      //     name:'ogulink',
-      //     component:Ogu
-      //   }
-      // ]
+      redirect:'/about/ahis',
+      children:[
+        {
+          path:'/about/acontent',
+          name:'acontent',
+          component:Acontent
+        },
+        {
+          path:'/about/adel',
+          name:'adel',
+          component:Adel
+        },
+        {
+          path:'/about/ahis',
+          name:'ahis',
+          component:Ahis
+        },
+        {
+          path:'/about/aogu',
+          name:'aogu',
+          component:Aogu
+        }
+      ]
     },
     {
       path: '/login',
