@@ -26,9 +26,9 @@ export default {
 }
 </script>
 <style scoped>
-  /* .home{
+  .home{
     margin-top: 6px;
-  } */
+  }
   .homes{
     background: url('../../src/assets/bg.jpg') no-repeat;
     height:85vh;

@@ -25,7 +25,10 @@
     <!-- {{bascks}} -->
     <!-- 右侧购物车结构 -->
     <div class="col-sm-12 col-md-4">
-      <button class="btn btn-block btn-secondary">—— 购物车总览 ——</button>
+      <!-- <button class="btn btn-block btn-secondary">—— 购物车总览 ——</button> -->
+      <div class="card bg-secondary text-white">
+        <div class="card-title text-center">—— 购物车总览 ——</div>
+      </div>
       <!-- 进行判断购物车中是否有数据，在进行展示 -->
       <div v-if="bascks.length">
         <table class="table">
@@ -162,5 +165,7 @@ export default {
 </script>
 
 <style scoped>
-
+  .menu{
+    margin-top: 6px;
+  }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div id="reg">
+  <div class="reg container">
     <div class="row">
       <div class="col-md-12 col-lg-12">
         <div class="card">
@@ -67,5 +67,8 @@ export default {
     width: 100%;
     border-radius: 6px;
     opacity: 0.2;
+  }
+  .reg{
+    margin-top: 6px;
   }
 </style>

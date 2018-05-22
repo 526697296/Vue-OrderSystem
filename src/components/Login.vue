@@ -1,5 +1,5 @@
 <template>
-  <div id="login">
+  <div class="login container">
     <div class="row">
       <div class="col-md-12 col-lg-12">
         <div class="card">
@@ -80,5 +80,8 @@ export default {
     width: 100%;
     border-radius: 6px;
     opacity: 0.5;
+  }
+  .login{
+    margin-top: 6px;
   }
 </style>
