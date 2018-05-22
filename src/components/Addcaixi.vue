@@ -41,7 +41,7 @@
             </div>
         </div>
         <div class="form-group row">
-            <button type="button" class="btn btn-success btn-block">添加</button>
+            <button @click="addMenuItem" type="button" class="btn btn-success btn-block">添加</button>
         </div>
       </form>
   </div>
@@ -54,7 +54,35 @@ export default {
         newp:{}
     };
   },
-  components: {}
+  methods: {
+      addMenuItem(){
+        //   console.log(this.newp)
+        let data = {
+            name:this.newp.name,
+            description:this.newp.description,
+            options:[
+                {
+                    size:this.newp.size1,
+                    price:this.newp.price1
+                },{
+                    size:this.newp.size2,
+                    price:this.newp.price2
+                }
+            ]
+        }
+        // 27732357@qq.com abc12345
+        fetch("https://wd5259196195tskwvr.wilddogio.com/zmenu.json",{
+            method:"POST",
+            headers:{
+                "Content-type":"application/json"
+            },
+            body:JSON.stringify(data)
+        })
+            .then(res => {res.json()})
+            .then(data => {this.$router.push('/menu')})
+            .catch(err => {console.log(err)})
+      }
+  }
 }
 </script>
 <style scoped>

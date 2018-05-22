@@ -15,11 +15,11 @@
             <th>操作</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody v-for="item in getMenuitems" :key="item.name">
           <tr>
-            <td>黄焖鸡</td>
+            <td>{{item.name}}</td>
             <td>
-              <button class="btn btn-sm btn-outline-danger">&times;</button>
+              <button @click="delemenu(item)" class="btn btn-sm btn-outline-danger">&times;</button>
             </td>
           </tr>
         </tbody>
@@ -34,11 +34,44 @@ export default {
   name: 'Admin',
   data(){
     return{
-
+      getMenuitems:[]
     }
   },
   components:{
     Addcaixi
+  },
+  methods:{
+    delemenu(item){
+      fetch("https://wd5259196195tskwvr.wilddogio.com/zmenu/"+item.id+"/.json",{
+        method:"DELETE",
+        headers:{
+          'Content-type':'application/json'
+        }
+      })
+      .then(res => {
+        res.json()
+      })
+      .then(data =>{
+        this.$router.push('/menu')
+      })
+      .catch(err => {
+        console.log(err)
+      })
+    }
+  },
+  created(){
+    fetch("https://wd5259196195tskwvr.wilddogio.com/zmenu.json")
+      .then(res => {
+        return res.json()
+      })
+      .then(data => {
+        let menua = [];
+        for(let key in data){
+          data[key].id = key;
+          menua.push(data[key])
+        }
+        this.getMenuitems = menua;
+      })
   }
 }
 </script>
