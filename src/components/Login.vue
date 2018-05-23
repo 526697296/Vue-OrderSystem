@@ -34,6 +34,15 @@ export default {
       password:'',
     }
   },
+  // 设置导航守卫，组件内的导航守卫
+  beforeRouteEnter(to, from, next){
+    // 这里只能用vm代替this
+    // 当用户点击退出后，这里先进行清空
+    next(vm =>{
+      vm.$store.dispatch("setUser",null)
+    })
+    
+  },
   components:{
     
   },
@@ -64,9 +73,11 @@ export default {
           // 如果匹配上，是一个长度length>1的对象，如果数据库中没有，则返回一个空数组
           // console.log(resule);
           if(resule != null && resule.length > 0){
+            this.$store.dispatch("setUser",resule[0].email);
             this.$router.push('/home')
           }else{
-            alert("账号或者密码错误")
+            alert("账号或者密码错误");
+            this.$store.dispatch("setUser",null)
           }
         } )
     }

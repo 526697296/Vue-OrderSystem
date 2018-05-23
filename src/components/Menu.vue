@@ -61,7 +61,7 @@
 </template>
 
 <script>
-
+import axios from 'axios'
 export default {
   name: 'Menu',
   data(){
@@ -70,47 +70,17 @@ export default {
       bascks:[],
       basktext:"目前购物车还未添加任何商品，请左边选择。",
       // 自己mock的数据
-      getMenuItems:{
-        1:{
-          'id':1,
-          'name':'黄焖鸡米饭',
-          'description':'加鸡腿',
-          'options':[{
-            'size':'小份',
-            'price':15
-          },{
-            'size':'大份',
-            'price':20
-          }]
-        },
-        2:{
-          'id':2,
-          'name':'兴国米粉鱼',
-          'description':'加鸡腿',
-          'options':[{
-            'size':'小份',
-            'price':15
-          },{
-            'size':'大份',
-            'price':20
-          }]
-        },
-        3:{
-          'id':3,
-          'name':'小鸡炖蘑菇',
-          'description':'加鸡腿',
-          'options':[{
-            'size':'小份',
-            'price':15
-          },{
-            'size':'大份',
-            'price':20
-          }]
-        }
-      }
+      // getMenuItems:{}
     }
   },
+  created(){
+    this.axiosdata()
+  },
   computed:{
+    getMenuItems(){
+      // 获取vuex里面的数据
+      return this.$store.state.menuItmes
+    },
     toal(){
       let totalm = 0;
       for(let index in this.bascks){
@@ -121,6 +91,20 @@ export default {
     }
   },
   methods:{
+    axiosdata(){
+      // axios.get('/zmenu.json')
+      //   .then((res) => {
+      //     this.getMenuItems = res.data;
+      //   })
+      //   .catch((err) => {
+      //     console.log(err)
+      //   })
+      // 将请求到的数据放入vuex中
+      axios.get('/zmenu.json')
+        .then((res) => {
+          this.$store.commit("setMenuItems",res.data)
+        })
+    },
     addToblack(item,option){
       let bask = {
         name:item.name,

@@ -80,6 +80,9 @@ export default {
         })
             .then(res => {res.json()})
             .then(data => {this.$router.push('/menu')})
+            // .then(res => {
+            //     this.$store.commit('pushtomenus',data)
+            // })
             .catch(err => {console.log(err)})
       }
   }

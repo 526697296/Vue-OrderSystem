@@ -34,7 +34,15 @@ export default {
   name: 'Admin',
   data(){
     return{
-      getMenuitems:[]
+      // getMenuitems:[]
+    }
+  },
+  computed:{
+    getMenuitems:{
+      get(){
+        return this.$store.state.menuItmes
+      },
+      set(){}
     }
   },
   components:{
@@ -53,6 +61,7 @@ export default {
       })
       .then(data =>{
         this.$router.push('/menu')
+        // this.$store.commit('removemenuItems',item)
       })
       .catch(err => {
         console.log(err)
@@ -70,7 +79,9 @@ export default {
           data[key].id = key;
           menua.push(data[key])
         }
-        this.getMenuitems = menua;
+        // 利用vuex进行数据同步
+        this.$store.commit("setMenuItems",menua)
+        // this.getMenuitems = menua;
       })
   }
 }

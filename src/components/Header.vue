@@ -18,10 +18,15 @@
   </ul>
   <ul class="navbar-nav ml-auto">
     <li>
-      <router-link to="/login" class="nav-link" exact>欢迎登入</router-link>
+      <router-link to="/login" class="nav-link" v-show="!isLogin" exact>欢迎登入</router-link>
+    </li>
+    <!-- 当用户登入成功，展示用户的账号 -->
+    <li class="nav-link">{{currentUser}}</li>
+    <li>
+      <router-link to="/login" class="nav-link" v-show="isLogin" exact>[退出]</router-link>
     </li>
     <li>
-      <router-link to="/reg" class="nav-link" exact>欢迎注册</router-link>
+      <router-link to="/reg" class="nav-link" v-show="!isLogin" exact>欢迎注册</router-link>
     </li>
   </ul>
 </nav>
@@ -31,7 +36,17 @@
 export default {
   name: "Header",
   data() {
-    return {};
+    return {}
+  },
+  // 计算属性
+  computed:{
+    // 获取到vuex登入状态
+    currentUser(){
+      return this.$store.getters.currentUser
+    },
+    isLogin(){
+      return this.$store.getters.isLogin
+    }
   }
 };
 </script>

@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import axios from 'axios'
-
+import {store} from './store/store.js'
 Vue.config.productionTip = false
 
 axios.defaults.baseURL = 'https://wd5259196195tskwvr.wilddogio.com/'
@@ -13,6 +13,7 @@ axios.defaults.baseURL = 'https://wd5259196195tskwvr.wilddogio.com/'
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })
