@@ -39,7 +39,7 @@
             <th>价格</th>
           </tr>
         </thead>
-        <tbody v-for="item in bascks" :key="item.id">
+        <tbody v-for="item in bascks" :key="item.name">
           <tr>
             <td>
               <button @click="dquantity(item)" class="btn btn-sm btn-outline-success">-</button>

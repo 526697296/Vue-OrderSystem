@@ -4,7 +4,7 @@
       <div class="homes text-center col-sm-12">
         <div class="background">
           <h1>欢迎来到ZHOUJH点餐系统。</h1>
-          <button @click="gotoMenu" class="btn btn-success">进入系统</button>
+          <button @click="gotoMenu" class="btn btn-success">欢迎欢迎</button>
         </div>
       </div>
     </div>
@@ -21,6 +21,7 @@ export default {
   },
   methods:{
     gotoMenu(){
+      // this.$router.push('/login')
     }
   }
 }

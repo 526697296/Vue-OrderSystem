@@ -11,7 +11,7 @@
             <a class="list-group-item list-group-item-action">联系我们</a>
           </router-link>
           <router-link tag="div" class="nav-link" :to="{name:'aogu'}" exact>
-            <a class="list-group-item list-group-item-action">点餐文档</a>
+            <a class="list-group-item list-group-item-action">章程简介</a>
           </router-link>
           <router-link tag="div" class="nav-link" :to="{name:'adel'}" exact>
             <a class="list-group-item list-group-item-action">快递信息</a>
