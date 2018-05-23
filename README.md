@@ -44,9 +44,9 @@ npm run build --report
 
 ### 菜单管理
 
-<img src="https://github.com/526697296/order-system/blob/master/src/assets/3.png/>
+<img src="https://github.com/526697296/order-system/blob/master/src/assets/3.png"/>
 
 ### 关于我们&&登入
 
-<img src="https://github.com/526697296/order-system/blob/master/src/assets/4.png/>
-<img src="https://github.com/526697296/order-system/blob/master/src/assets/5.png/>
+<img src="https://github.com/526697296/order-system/blob/master/src/assets/4.png"/>
+<img src="https://github.com/526697296/order-system/blob/master/src/assets/5.png"/>
