@@ -5,16 +5,17 @@
       <table class="table ">
         <thead class="thead-default">
           <tr>
-            <th>规格</th>
+            <th>菜名</th>
+            <th>编号</th>
             <th>价格</th>
             <th>购买</th>
           </tr>
         </thead>
         <tbody v-for="item in getMenuItems" :key="item.name">
-          <tr>
-            <td><strong>{{item.name}}</strong></td>
-          </tr>
+          <!-- <tr> -->
+          <!-- </tr> -->
           <tr v-for="option in item.options" :key="option.size">
+            <td><strong>{{item.name}}</strong></td>            
             <td>{{option.size}}</td>
             <td>{{option.price}}元</td>
             <td><button @click="addToblack(item,option)" class="btn btn-sm btn-outline-success">+</button></td>
@@ -35,7 +36,7 @@
         <thead class="thead-default">
           <tr>
             <th>数量</th>
-            <th>品种</th>
+            <th>菜名</th>
             <th>价格</th>
           </tr>
         </thead>
@@ -46,7 +47,7 @@
               <span>{{item.quantity}}</span>
               <button @click="iquantity(item)" class="btn btn-sm btn-outline-success">+</button>
             </td>
-            <td>{{item.name}}{{item.size}}</td>
+            <td>{{item.name}}</td>
             <td>{{item.price * item.quantity}}元</td>
           </tr>
         </tbody>
