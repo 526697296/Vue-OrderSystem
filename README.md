@@ -36,17 +36,17 @@ npm run build --report
 
 ### 首页
 
-<img src="https://github.com/526697296/order-system/src/assetc/1.jpg" width="365" height="619"/>
+<img src="https://github.com/526697296/order-system/blob/master/src/assets/1.jpg"/>
 
 ### 菜单详情
 
-<img src="https://github.com/526697296/order-system/src/assetc/2.png" width="365" height="619"/>
+<img src="https://github.com/526697296/order-system/blob/master/src/assets/2.png"/>
 
 ### 菜单管理
 
-<img src="https://github.com/526697296/order-system/src/assetc/3.png" width="365" height="619"/>
+<img src="https://github.com/526697296/order-system/blob/master/src/assets/3.png/>
 
 ### 关于我们&&登入
 
-<img src="https://github.com/526697296/order-system/src/assetc/4.png" width="365" height="619"/>
-<img src="https://github.com/526697296/order-system/src/assetc/5.png" width="365" height="619"/>
+<img src="https://github.com/526697296/order-system/blob/master/src/assets/4.png/>
+<img src="https://github.com/526697296/order-system/blob/master/src/assets/5.png/>
